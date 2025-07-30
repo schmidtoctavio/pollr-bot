@@ -12,7 +12,7 @@ Pollr is a clean and stylish Discord bot that allows you to create interactive p
 
 Click the link below to invite Pollr to your Discord server:
 
-👉 [Invite Pollr to your server]()
+👉 **[Click here to invite Pollr](https://discord.com/oauth2/authorize?client_id=1399899255728111727&scope=bot+applications.commands&permissions=2147575808)**
 
 ---
 
