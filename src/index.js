@@ -44,17 +44,15 @@ for (const file of commandFiles) {
 // Register commands
 const rest = new REST({ version: '10' }).setToken(token);
 (async () => {
-    try {
-        console.log('🔄 Removing previous commands...');
-        await rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] });
-        console.log('✅ Previous commands removed.');
-
-        console.log('🔄 Registering new commands...');
-        await rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands });
-        console.log('✅ Commands registered successfully.');
-    } catch (error) {
-        console.error('❌ Error registering commands:', error);
-    }
+  try {
+    console.log("🔁 Refreshing commands (global)...");
+    await rest.put(Routes.applicationCommands(clientId), {
+      body: commands,
+    });
+    console.log("✅ Globally registered commands");
+  } catch (error) {
+    console.error(error);
+  }
 })();
 
 // Bot ready event
